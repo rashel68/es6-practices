@@ -10,8 +10,6 @@ class TeamSupport {
 }
 
 
-
-
 class Support extends TeamSupport {
     startSession() {
         console.log(this.name, 'Start Meet Session');
