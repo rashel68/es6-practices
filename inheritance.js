@@ -24,21 +24,6 @@ const tamjid = new Support('Tamjid Khan', 'Barisal', 'Support Instructor');
 
 
 
-
-
-class NeptuneDev extends TeamSupport {
-    releaseApp(version) {
-        console.log(this.name, 'release neptune new version ', version);
-    }
-}
-
-const rashel = new NeptuneDev('Rashel', 'Bhola', 'Neptune Dev');
-// console.log(rashel);
-// rashel.releaseApp('3.1.2');
-
-
-
-
 class StudentCare extends TeamSupport {
     supportTime;
     constructor(inputName, inputAddress, designation, supportTime) {
@@ -56,10 +41,28 @@ const salman = new StudentCare('Salman Khan', 'India', 'Student Support', '4pm')
 
 
 
+class NeptuneDev extends TeamSupport {
 
+    codeEiditor;
+    constructor(inputName, inputAddress, designation, editor) {
+        super(inputName, inputAddress, designation);
+        this.codeEiditor = editor;
+    }
+    releaseApp(version) {
+        console.log(this.name, 'release neptune new version ', version);
+    }
+}
 
-
-
+const rashel = new NeptuneDev('Rashel', 'Bhola', 'Neptune Dev', 'Android Studio');
+// console.log(rashel);
+// rashel.releaseApp('3.1.2');
 
 /* const asif = new NeptuneDev('Asif Khan', 'Banglades', 'Release Neptune App New Version')
 console.log(asif); */
+
+
+
+
+
+
+
